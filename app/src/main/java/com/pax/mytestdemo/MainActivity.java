@@ -1,13 +1,25 @@
 package com.pax.mytestdemo;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.pax.mytestdemo.mvp.base.BaseMvpActivity;
+import com.pax.mytestdemo.mvp.contract.MainContract;
+import com.pax.mytestdemo.mvp.presenter.MainPresenter;
+
+
+public class MainActivity extends BaseMvpActivity<MainPresenter> implements MainContract.MainView {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected void init() {
+
+    }
+
+    @Override
+    public int getLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected MainPresenter createPresenter() {
+        return new MainPresenter();
     }
 }

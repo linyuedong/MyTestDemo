@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.pax.mytestdemo">
 
+    //网络权限
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name="app.MyApplication"
         android:allowBackup="true"
@@ -16,16 +19,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".mvp.base.BaseActivity"
-            android:label="@string/title_activity_base"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity
-            android:name=".mvp.base.BaseMvpActivity"
-            android:label="@string/title_activity_base_mvp"
-            android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
 
