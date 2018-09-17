@@ -54,6 +54,7 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
                     //第一次网络请求
                     response1 = call1.execute();
                     Log.i(TAG, "testCache: response1 :"+response1.body().string());
+                    Log.i(TAG, "testCache: response1 :"+response1.headers().toString());
                     Log.i(TAG, "testCache: response1 cache :"+response1.cacheResponse());
                     Log.i(TAG, "testCache: response1 network :"+response1.networkResponse());
                     response1.body().close();
